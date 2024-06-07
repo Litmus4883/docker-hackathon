@@ -1,4 +1,4 @@
-FROM postgres:15.3
+FROM postgres
 
 RUN apt-get update && \
     apt-get install -y curl locales && \
