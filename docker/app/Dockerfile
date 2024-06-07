@@ -10,10 +10,10 @@ RUN localedef -f UTF-8 -i ja_JP ja_JP
 ENV LANG=ja_JP.UTF-8
 ENV TZ=Asia/Tokyo
 
-COPY package*.json ./
+COPY ./app/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY ./app ./
 
 CMD ["npm", "run", "start:dev"]
